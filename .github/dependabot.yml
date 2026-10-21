@@ -4,3 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      github_actions_minor_patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
+      github_actions_security:
+        applies-to: security-updates
+        patterns: ["*"]
